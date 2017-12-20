@@ -1,8 +1,9 @@
-<span class="bigTitle">JavaScript For Cats</span>
-## An introduction for new programmers <span class="right">![cat](images/substack-cats.png)</span>
-### *So easy your human companion could do it too!*
+# বিড়ালদের জাভাস্ক্রিপ্ট
+## নতুন প্রোগ্রামারদের জন্য প্রোগ্রামিংয়ের সূচনা ![cat](images/substack-cats.png)
+### *এতই সহজ যে তোমার মনুষ্য সঙ্গীও বুঝতে পারবে!*
+এই বইটি js for cats হতে প্রত্যক্ষভাবে অনুপ্রাণিত।
 
-JavaScript is a programming language or, in other words, a means by which a computer is instructed to do things. Just the same as one controls humans with hisses and meows, one controls computers with statements written in a programming language. All web browsers understand JavaScript and you can take advantage of that to make web pages do crazy things!
+জাভাস্ক্রিপ্ট হলো একটা প্রোগ্রামিং ভাষা, অন্যভাবে বলতে গেলে এমন একটি উপায় যা দিয়ে কম্পিউটারকে বিভিন্ন কাজ করতে আদেশ দেয়া যায়। ঠিক যেভাবে তুমি একটা মানুষকে তোমার ভাষায় মিউ মিউ করে আদেশ করো, তেমনভাবেই কম্পিউটারকে একটি প্রোগ্রামিং ভাষায় লিখিতভাবে কম্পিউটারকে কন্ট্রোল করতে পারবে। সব ব্রাউজারই জাভাস্ক্রিপ্ট বুঝতে পারে, আর তুমি সেই সুযোগ কাজে লাগিয়ে অসাধারণ সবকিছু করতে পারবে।
 
 JavaScript started as a way to make web pages more interactive. Nowadays JavaScript runs in more places than just web browsers &mdash; it runs on web servers, phones and even robots! This page will teach you some JavaScript basics so that you can get up and running in no time*.
 
@@ -161,7 +162,7 @@ This way `yellIt` becomes more **generic**, meaning it only does one or two simp
 Now that we have some basic skills under our belt (*Author's note: do cats even wear belts?*) we can start being lazy. What?! Yes, that's right: programming is about being lazy. Larry Wall, inventor of the Perl programming language, called laziness the [most important virtue](http://c2.com/cgi/wiki?LazinessImpatienceHubris) of a good programmer. If computers didn't exist you would have to do all sorts of tedious tasks by hand, but if you learn to program you can lay in the sun all day while a computer somewhere runs your programs for you. It is a glorious lifestyle filled with relaxation!
 
 Loops are one of the most important ways to harness the power of a computer. Remember `Underscore.js` from earlier? Make sure you have it loaded in the page (remember: you can just hit the up arrow on your keyboard a few times and then hit `Enter` to load it in again if you need to) and try copy/pasting this into your console:
-  
+
 ```js
 function logANumber(someNumber) {
   console.log(someNumber)
@@ -212,7 +213,7 @@ Sweet! Now you have a list of your cat buddies.
 
 Elements (that is what you call a single item in an array) that are stored within arrays start at 0 and count up from there. So `myCatFriends[0]` returns `bill` and `myCatFriends[1]` returns `tabby`... etc etc.
 
-To get buddies out of your brand new Array you can just access an element directly like so: 
+To get buddies out of your brand new Array you can just access an element directly like so:
 
 ```js
 console.log(myCatFriends[0])
@@ -227,7 +228,7 @@ To check that the new cat made it into your array you can use `.length`:
 ![console](images/array-push-length.png)
 
 Notice how `push` returned the length? Handy! Also take note that arrays will always **preserve ordering** which means they will remember the order in which you added or defined things. Not everything in JavaScript preserves ordering so remember this special property of Arrays!
-  
+
 ### <a id="objects" href="#objects">#</a> Objects
 
 Arrays are good for lists, but for other tasks they can be hard to work with. Consider our array of cat friends. What if you also wanted to store more than just names?
@@ -249,8 +250,8 @@ var firstCat = { name: "bill", lastName: "the cat", address: "The Alley" }
 var secondCat = { name: "tabby", lastName: "cat", address: "Grandmas House" }
 var thirdCat = { name: "ceiling", lastName: "cat", address: "Attic" }
 ```
-  
-Why would we do it this way? Because now we have a variable for each cat that we can use to get that cats values in a more convenient and readable way. 
+
+Why would we do it this way? Because now we have a variable for each cat that we can use to get that cats values in a more convenient and readable way.
 
 ![console](images/object-lookup.png)
 
@@ -286,7 +287,7 @@ var moodLog = [
   {
     date: "10/20/2012",
     mood: "catnipped"
-  }, 
+  },
   {
     date: "10/21/2012",
     mood: "nonplussed"
@@ -337,7 +338,7 @@ function measureLoopSpeed() {
   // Loop until Date.now() is 1000 milliseconds (1 second) or more into
   // the future from when we started looping. On each loop, call addOne
   while (Date.now() - now < 1000) addOne()
-  
+
   // Finally it has been >= 1000ms, so let's print out our total count
   console.log(count)
 }
@@ -377,7 +378,7 @@ function a(done) {
   download('https://pbs.twimg.com/media/B4DDWBrCEAA8u4O.jpg:large', function doneDownloading(error, png) {
     // handle error if there was one
     if (err) console.log('uh-oh!', error)
-    
+
     // call done when you are all done
     done()
   })
@@ -405,8 +406,8 @@ Got another topic you wanna see covered? Open an issue for it [on github](http:/
 ### <a id="recommended-reading" href="#recommended-reading">#</a> Recommended reading
 
   JavaScript For Cats skips over lots of details that aren't important for getting started (cats are not known for their attention spans), but if you feel like you need to dive in deeper then check these out:
-  
-  - [NodeSchool.io](http://nodeschool.io/) is a community driven, open source educational software that teaches various web development skills in an interactive, self-guided format. I helped make NodeSchool! Sadly it features fewer cats than this page. 
+
+  - [NodeSchool.io](http://nodeschool.io/) is a community driven, open source educational software that teaches various web development skills in an interactive, self-guided format. I helped make NodeSchool! Sadly it features fewer cats than this page.
   - [Eloquent Javascript](http://eloquentjavascript.net/) is a free book that teaches you JavaScript! It's pretty good! Especially the chapter on [values, variables, and control flow](http://eloquentjavascript.net/chapter2.html)
   - [Mozilla's JavaScript Guide](https://developer.mozilla.org/en-US/docs/JavaScript/Guide) also has a pretty sweet intro chapter called [values, variables and literals](https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals)
   - [`standard` JS Style Guide](https://github.com/feross/standard) is a "zero configuration" linter for JS style that I use
