@@ -1,36 +1,33 @@
 # বিড়ালদের জাভাস্ক্রিপ্ট
-## নতুন প্রোগ্রামারদের জন্য প্রোগ্রামিংয়ের সূচনা ![cat](images/substack-cats.png)
+## নতুনদের জন্য প্রোগ্রামিংয়ের সূচনা ![cat](images/substack-cats.png)
 ### *এতই সহজ যে তোমার মনুষ্য সঙ্গীও বুঝতে পারবে!*
-**এই গাইডটি [JavaScript For Cats](https://github.com/maxogden/javascript-for-cats) হতে প্রত্যক্ষভাবে অনুপ্রাণিত।**
 
 জাভাস্ক্রিপ্ট হলো একটা প্রোগ্রামিং ভাষা, অন্যভাবে বলতে গেলে এমন একটি উপায় যা দিয়ে কম্পিউটারকে বিভিন্ন কাজ করতে আদেশ দেয়া যায়। ঠিক যেভাবে তুমি একটা মানুষকে তোমার ভাষায় মিউ মিউ করে আদেশ করো, তেমনভাবেই কম্পিউটারকে একটি প্রোগ্রামিং ভাষায় লিখিতভাবে কম্পিউটারকে কন্ট্রোল করতে পারবে। সব ব্রাউজারই জাভাস্ক্রিপ্ট বুঝতে পারে, আর তুমি সেই সুযোগ কাজে লাগিয়ে অসাধারণ সবকিছু করতে পারবে।
 
-JavaScript started as a way to make web pages more interactive. Nowadays JavaScript runs in more places than just web browsers &mdash; it runs on web servers, phones and even robots! This page will teach you some JavaScript basics so that you can get up and running in no time*.
+জাভাস্ক্রিপ্টের শুরুটা হয়েছিলো ওয়েবপেজ গুলো ইন্টারেক্টিভ করার জন্য। কিন্তু এখন জাভাস্ক্রিপ্ট শুধু ব্রাউজারেই চলে না, এটা সার্ভার, মোবাইল এবং এমনকি রোবোটেও চলে। এই পেজে তুমি জাভাস্ক্রিপ্টের বেসিক শিখতে পারবে, যাতে তুমিও অল্প সময়েই শুরু করতে পারো।
 
-\* *Actual time: more than none. Probably an hour or two. Also since you are a cat you are less likely to run and more likely to lay around in the sun*
+*সত্যি বলতে একদমই সময় লাগবে না, কিংবা হয়তো দুই এক ঘন্টা লাগবে, কিন্তু তুমি যেহেতু একটি বিড়াল, তাই তোমার দৌড়াদৌড়ির সম্ভাবনা কম, এবং রোদ পোহানোর সম্ভাবনা বেশি, নাহয় ওই সময়টাই কাজে লাগালে।*
 
-JavaScript for Cats is [CC0 Licensed](https://creativecommons.org/publicdomain/zero/1.0/)
+## সূচীপত্র
 
-## Table of contents
+- [কনসোল](#basics)
+- [স্ট্রিং](#strings)
+- [ভ্যালু আর ভ্যারিয়েবল](#values)
+- [ফাংশন](#functions)
+- [জাভাস্ক্রিপ্টের ভিতরের ফাংশনগুলো](#standard-library)
+- [নতুন ফাংশন ডাউনলোড করা](#third-party-javascript)
+- [নতুন ফাংশন লেখা](#writing-functions)
+- [লুপ](#loops)
+- [এরে](#arrays)
+- [অবজেক্ট](#objects)
+- [কলব্যাক](#callbacks)
+- [আরো জানতে যা পড়বে](#recommended-reading)
 
-- [The console](#basics)
-- [Strings](#strings)
-- [Values and variables](#values)
-- [Using functions](#functions)
-- [Built in JS functions](#standard-library)
-- [Download new JS functions](#third-party-javascript)
-- [Writing new functions](#writing-functions)
-- [Loops](#loops)
-- [Arrays](#arrays)
-- [Objects](#objects)
-- [Callbacks](#callbacks)
-- [Recommended reading](#recommended-reading)
+## ভয় পেলে চলবে না
 
-## Don't be a scaredy-cat
+![cat](images/yarnify.png)
 
-<span class="right">![cat](images/yarnify.png)</span>
-
-You will always land on your feet &mdash; even when programming! Unlike [pawing over a glass of water](images/dealwithit.gif) on your laptop, _nothing_ in these tutorials will damage your computer in any way, even if you mistype a command or click the wrong button. Like cats, computer programmers make mistakes all time: misspelling things, forgetting quotes or brackets, and being forgetful of how basic functions (and yarn, lasers) work. Programmers care more about making it work _eventually_ rather than trying to make it work the very first time. The best way to learn is by making mistakes!
+You will always land on your feet &mdash; even when programming! Unlike pawing over a glass of water on your laptop, _nothing_ in these tutorials will damage your computer in any way, even if you mistype a command or click the wrong button. Like cats, computer programmers make mistakes all time: misspelling things, forgetting quotes or brackets, and being forgetful of how basic functions (and yarn, lasers) work. Programmers care more about making it work _eventually_ rather than trying to make it work the very first time. The best way to learn is by making mistakes!
 
 So don't be a scaredy-cat! The absolute worst thing that will happen is that you might have to refresh this page in your web browser if you get stuck. Don't worry though, this will happen very rarely.
 
@@ -421,5 +418,5 @@ Got another topic you wanna see covered? Open an issue for it [on github](http:/
 <center>![satisfied customer](images/customers3.png)</center>
 <center>![satisfied customer](images/customers4.png)</center>
 
-*JSForCats.com is a labor of love and work in progress by [@maxogden](http://twitter.com/maxogden). If you would like to contribute and make this tutorial better there is a Github repo [right over here](http://github.com/maxogden/javascript-for-cats).*
-<center>![console](images/awesome.jpg)</center>
+# ক্রেডিটঃ
+- [@maxogden](http://twitter.com/maxogden) এর [JavaScript For Cats](https://github.com/maxogden/javascript-for-cats) হতে প্রত্যক্ষভাবে অনুপ্রাণিত।
