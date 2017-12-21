@@ -419,4 +419,4 @@ Got another topic you wanna see covered? Open an issue for it [on github](http:/
 <center>![satisfied customer](images/customers4.png)</center>
 
 # ক্রেডিটঃ
-- [@maxogden](http://twitter.com/maxogden) এর [JavaScript For Cats](https://github.com/maxogden/javascript-for-cats) হতে প্রত্যক্ষভাবে অনুপ্রাণিত।
+- [Maxwell Ogden](https://twitter.com/denormalize) এর [JavaScript For Cats](https://github.com/maxogden/javascript-for-cats) হতে প্রত্যক্ষভাবে অনুপ্রাণিত।
