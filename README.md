@@ -1,4 +1,4 @@
-# বিড়ালদের জাভাস্ক্রিপ্ট
+# <strong style="text-align: center">বিড়ালদের জাভাস্ক্রিপ্ট</strong>
 ## নতুনদের জন্য প্রোগ্রামিংয়ের সূচনা ![cat](images/substack-cats.png)
 ### *এতই সহজ যে তোমার মনুষ্য সঙ্গীও বুঝতে পারবে!*
 
@@ -27,33 +27,33 @@
 
 ![cat](images/yarnify.png)
 
-You will always land on your feet &mdash; even when programming! Unlike pawing over a glass of water on your laptop, _nothing_ in these tutorials will damage your computer in any way, even if you mistype a command or click the wrong button. Like cats, computer programmers make mistakes all time: misspelling things, forgetting quotes or brackets, and being forgetful of how basic functions (and yarn, lasers) work. Programmers care more about making it work _eventually_ rather than trying to make it work the very first time. The best way to learn is by making mistakes!
+তোমাকে সর্বোদাই নিজের পায়ে চলতে হবে &mdash; এমনকি প্রোগ্রামিং এর ক্ষেত্রেও ঠিক তাই! এই টিউটোরিয়াল কোনোভাবেই তোমার কম্পিউটার কে নষ্ট করবে না। একগ্লাস পানি যখন তোমার কম্পিউটারের উপর পড়ে তখন তোমার কম্পিউটার নষ্ট হয়ে যায়। কিন্তু তুমি যদি কমান্ড টাইপ করতেও ভুল করো তাও তোমার কম্পিউটারের কিছুই হবেনা। বড়জোড় তোমার কম্পিউটারের ব্রাউজারকে রিফ্রেশ দেয়া লাগতে পারে। বিড়ালের মত, কম্পিউটার প্রোগ্রামার রাও সবসময় ভুল করে। যেমন: টাইপিং মিস্টেক, উক্তিচিহ্ন বা ব্রাকেটে ভুল করা, এবং কিভাবে বেসিক ফাংশনগুলো (ইয়ার্ন, লেজার) ইত্যাদি কিভাবে কাজ করে। প্রোগ্রামাররা কোনোকিছু তৈরি করলে সেটাকে এমনভাবে তৈরি করে যেনো সেটা প্রথমবার কাজে না এসে পুর্ণাঙ্গভাবে কাজে লাগে। আসলে শেখার সেরা উপায় হলো ভুল করা।
 
-So don't be a scaredy-cat! The absolute worst thing that will happen is that you might have to refresh this page in your web browser if you get stuck. Don't worry though, this will happen very rarely.
+সুতরাং ভিতু বেড়াল সাজলে চলবে না। যদি ভুল হয়েও যায়, তাহলে সর্বোচ্চ ব্রাউজারের যে পেইজে তুমি কাজ করছো সেই পেজটি রিফ্রেশ দেয়া লাগতে পারে। ভয় পাওয়ার কিছুই নেই। এটা খুবই কম ঘটে।
 
-## <a id="basics" href="#basics">#</a> The basics
+## <a id="basics" href="#basics">#</a> কনসোল
 
-There is JavaScript running on this page right now.  Let's play around with it a little. For the sake of simplicity I'll assume you are using Google Chrome to read this page (if you aren't it's probably easier on both of us if you follow along with Chrome).
+বর্তমানে এই পেইজে জাভাস্ক্রিপ্ট কাজ করছে। চলো এর সাথে একটু খেলা করা যাক। সাধারনত সহজতার ক্ষেত্রে আমি মনে করছি তুমি এই পেজ টি গুগল ক্রোম ব্যবহার করে ব্রাউজ করছো (কেননা এতে আমাদের দুজনেরই সুবিধা হবে যদি তুমিও ক্রোম ব্যবহার করো)।
 
-First, right click anywhere on the screen and hit **Inspect Element**, then click on the **Console** tab. You should see a thingy that looks like this:
+প্রথমে, স্ক্রীনের যেকোনো জায়গায় মাউসের রাইট বাটন ক্লিক করো এবং নতুন যেই পপআপ মেন্যু আসবে সেখান থেকে **Inspect Element** সিলেক্ট করো, তারপর **Console** নামক ট্যাবে ক্লিক করো। তুমি অনেকটা এমন দেখতে পাবে:
 
 ![console](images/console.gif)
 
-This is a console, otherwise known as a "command line" or "terminal". Basically it's a way to type one thing at a time into a computer and immediately get the computers answer back. They are super useful as a learning tool (I still use the console nearly every day that I'm coding).
+এটা হলো কনসোল, অন্যভাবে তুমি এটাকে কমান্ড লাইন বা টার্মিনাল হিসেবে ভাবতে পারো। আসলে এটা দিয়ে তুমি কম্পিউটারে যেই কমান্ড দেবে সেই কমান্ড ই ইনিস্ট্যান্টলি রিপ্লাই দেয়ার একটা মাধ্যম। কনসোল শেখার জন্য ব্যবহার করা টুলসগুলোর ভিতরে সবচেয়ে জনপ্রিয় ও ব্যবহৃত (আমি এখনো প্রায় প্রতিদিনই কোডিং করার সময় কনসোল ব্যবহার করে থাকি)।
 
-The console does some pretty cool stuff. Here I have started to type something and the console is helping me out by giving me a list of all the possible things I could continue to type! Another thing you could do is type `1 + 1` into the console and then hit the `Enter` key and watch what happens.
+কনসোলের কিছু চমৎকার ভালো দিক আছে। যেমন আমি যদি কিছু কনসোলে টাইপ করি তাহলে কনসোল আমাকে সেই শব্দ বা কমান্ডকে সম্পুর্ন করার জন্য সম্ভাব্য কমান্ডের একটি লিস্ট শো করে। আরেকটা মজার জিনিস, তুমি কনসোলে `1 + 1` টাইপ করো এবং `Enter` কী প্রেশ করে দেখো কি হয়।
 
-Using the console is a very important part of learning JavaScript. If you don't know if something works or what the command is for something, go to the console and figure it out! Here's an example:
+কনসোলের ব্যবহার জাভাস্ক্রীপ্ট শেখার অন্যতম গুরুত্বপুর্ণ একটি পার্ট। যদি তুমি না যানো যে, তোমার কমান্ড কাজ করবে কিনা বা তোমার কমান্ডে কি কাজ হবে তবে কনসোল তোমাকে এক্ষেত্রে সম্পুর্ণ সাহায্য করবে। একটি উদাহরন দেয়া হলোঃ
 
-### <a id="strings" href="#strings">#</a> Strings
+### <a id="strings" href="#strings">#</a> স্ট্রিং
 
-Since I am a cat I want to replace every instance of the word `dog` on the Internet with `those blasted dogs`. First go into your console and type in a few sentences that contain the word `dog` at least once. In JavaScript a bunch of letters, numbers, words or anything else is known as a **String** (as in a *string* of characters). Strings have to begin AND end with a quotation mark. Single `'` or double `"` is fine, just make sure you use the same at the beginning as you do at the end.
+যেহেতু আমি একটি বিড়াল তাই আমি চাচ্ছি যে, ইন্টারনেটে থাকা সকল উদাহরনগুলের থেকে `dog` শব্দটির পরিবর্তে `those blasted dogs` বসাতে। প্রথমে তোমার কনসোলে যাও। তারপর `dog` শব্দটি অন্ততপক্ষে একবার আছে এমন একটি বাক্য লিখ। জাভাস্ক্রিপ্টে কতোগুলো শব্দ, বর্ণ, নম্বর বা যেকোনোকিছুকেই **String** হিসেবে ধরা হয় (এমনকি অক্ষরকেও *string* ধরা হয়)। স্ট্রিং শুরু ও শেষ হয় কোটেশন মার্ক দ্বারা। তুমি চাইলে সিঙ্গেল কোটেশন মার্ক `'` বা ডাবল কোটেশন মার্ক `"` যেটা ইচ্ছা ব্যবাহর করতে পারো তবে, একটা ব্যপারে খেয়াল রাখবে যে তুমি শুরু যা দিয়ে করবে শেষেও ঠিক তাই বসাবে।
 
 ![console](images/console-strings.gif)
 
-See the nasty error message? Don't worry - you didn't break any laws. SyntaxError ILLEGAL is just the way it sounds when robots tell you that your program has a problem. The first two sentences had matching quotation marks at the beginning and end, but when I mixed single and double quotation marks it freaked out on me.
+বিদঘুটে ইরোরটা লক্ষ্য করেছো? ভয় পেয়োনা - তুমি কোনো আইন ভঙ্গ করোনি। SyntaxError ILLEGAL তখনই দেখায় যখন রোবোট তোমার প্রোগ্রামে ভুল খুজে পায়। প্রথম দুটি বাক্যের শুরুতে এবং শেষে একই কোটেশন মার্ক ব্যবহার করায় তাদের ক্ষেত্রে কোনো ইরোর দেখায় নি। কিন্তু যখনই আমি দুটোকে একত্রে ব্যবহার করতে চাই তখনই বিপত্তিটা আসল ঘটে।
 
-OK, to fix up one of these sentences (by replacing `dog` with our enhanced version) we have to first save the original sentence so that we can call it up later when we do our replacing magic. Notice how the string gets repeated in red when we type it into the console? This is because we haven't told it to save the sentence anywhere so it just gives it right back (or it gives us an Error back if we messed something up).
+আচ্ছা, উপরের উদাহরনগুলো থেকে যেকোনো একটা বাক্যকে সঠিক করতে (বাক্য `dog` শব্দটির পরিবর্তে আমাদের নিরবাচিত শব্দ বসাতে) আমাদের প্রথমে মুল বাক্যটাকে সংরক্ষন করে রাখতে হবে যাতে পরে আমরা তাকে কল করতে পারি এবং আমাদের পরিবর্তনের জাদু দেখাতে পারি। একটা ব্যাপার লক্ষ্য করো যখনই আমরা কনসোলে স্ট্রিং টাইপ করি তখনই তা দিত্বীয়বার লাল রংয়ের হয়ে পুনরাবৃত্তি করে? এর কারন হলো আমরা কম্পিউটারকে বলি নাই যে বাক্যটি সংরক্ষন করে রাখো। তাই এটি সাথে সাথেই আমাদের আউটপুট করে দেয়(অথবা এটি ইরোর দেখায় যদি আমরা কোথায় ভুল করে থাকি)।
 
 ### <a id="values" href="#values">#</a> Values and variables
 
