@@ -67,60 +67,72 @@ To store values we use things called **variables**. The word 'variable' means 'c
 
 If you simply type a variable name into the console it will print out the value stored in that variable. A note about variables is that by default they go away when you switch to a different page. If I were to hit the Refresh button in Chrome, for example, my `dogSentence` variable would get wiped and it would be like it never existed. But don't worry about this too much for now &mdash; you can just hit the up or down arrows on your keyboard while in the console to go through everything you've entered in recently.
 
-### <a id="functions" href="#functions">#</a> Functions
+  
 
-Now that we have our sentence stored in a variable, let's change a word stored in it!  We can do this by performing a *function*.  *Functions* are a type of value that, well, serve a specific *function* (AKA purpose or action) for us. Calling them "actions" sounded weird I guess so they went with the word "function" instead.
+### <a id="functions" href="#functions">#</a> ফাংশন'স
 
-JavaScript has a function called `replace` that does exactly what we want! Functions take in any number of values in their parentheses (zero, one or many) and return either nothing (`undefined`) or the changed string. The `replace` function is available to use on any strings and takes in two values: the characters to take out and the characters to swap in. It gets confusing to describe these things so here is a visual example:
+এখন আমাদের বাক্যগুলো  ভ্যারিয়েবেল এর মধ্যে সংরক্ষিত আছে ,চলো আমরা এটিতে সংরক্ষিত একটি শব্দ পরিবর্তন  করি ! আমরা একটি  ফাংশন ব্যবহার করে এই কাজটি সম্পন্ন করতে পারি । ফাংশন  হল এক ধরনের মান যা, ভালোভাবে , একটি নির্দিষ্ট ফাংশনকে পরিবেশন করে (অন্য ভাবে বললে, উদ্দেশ্য অথবা কাজ )  আমাদের জন্য । তাদেরকে "ক্রিয়াকাণ্ড" নামে ডাকলে  একটু অদ্ভহুত শোনা যায়, আমি মনে করি এর জন্যই তারা এই নামের  পরিবর্তে "ফাংশন" নামে চলে গিয়েছে ।   
+
+জাভাস্ক্রিপ্টে একটি ফাংশন আছে  `replace`  নামে  ঠিক  যেমন টা আমরা চাই ! ফাংশন তার বন্ধনিগুলিতে যেকোনো সংখ্যক মান নেয় (০, ১ অথবা এর অধিক) এবং  (`undefined`)   অথবা পরিবর্তিত স্ট্রিং ছাড়া কিছুই ফেরত দেয় না । (`Replace`) ফাংশন  যেকোনো স্ট্রিং এই সচরাচর  ব্যবহার করা যায়  এবং ২ টা মান লাগেঃ  অক্ষরগুলো সংগ্রহ করা এবং অক্ষরগুলো বিনিময় করা। এটা বর্ণনা করতে গেলে বিষয়গুলো গুলিয়ে যেতে পারে তাই এখানে উদাহরন দিয়ে দেখানো হলঃ
 
 ![console](images/console-replace.gif)
 
-Notice how the value of `dogSentence` is the same even after we run `replace` on it? This is because the `replace` function, (and most JavaScript functions for that matter) takes the value we give it and returns a **new value**, without modifying the value we passed in. Since we didn't store the result (there is no `=` on the left side of the replace function) it just printed out the return value in our console.
+লক্ষ্য  করেছো  কিভাবে `dogSentence`   এর মান একই রয়েছে , এমন কি আমরা  এর উপর `replace`  ব্যবহার করার পরেও ? তার কারন হচ্ছে   `replace`  ফাংশন ( এবং বেশিরভাগ  জাভাস্ক্রিপ্ট ফাংশনের ক্ষেত্রেও একই ) আমরা যেই মান দেই তা সে নেয় এবং ফেরত দেয় একটি নতুন মান , কোনোরূপ  মান পরিবর্তন করা ছাড়াই যা আমরা দিয়েছি । যেহেতু আমরা কোন  ফলাফল সংরক্ষন করিনি ( ` replace`  ফাংশন এর  বাম দিকে কোন `=`  নেই  ) এটা শুধু মুদ্রিত করবে কনসোলে যে মান রিটার্ন করা হয়েছে।
 
-### <a id="standard-library" href="#standard-library">#</a> The "standard library"
 
-You might be wondering what other functions are available in JavaScript. The answer: A TON. There are lots **built in, standard libraries** that you can learn about at MDN (A site run by Mozilla that has lotsa nifty information about web technologies). For example [here is the MDN page on JavaScript's Math object](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Math).
+### <a id="standard-library" href="#standard-library">#</a> স্ট্যান্ডার্ড লাইব্রেরি
 
-### <a id="third-party-javascript" href="#third-party-javascript">#</a> Third-party JavaScript
+তোমরা অবাক হতে পারো এই ভেবে যে আরও কি ধরনের ফাংশন রয়েছে জাভাস্ক্রিপ্টে। উত্তরটা হবেঃ এক টন। প্রচুর পরিমান তৈরিকৃত, স্ট্যান্ডার্ড লাইব্রেরি রয়েছে যা তুমি শিখতে পারবে MDN থেকে (মজিলা দ্বারা পরিচালিত একটি সাইট যেখানে ওয়েব টেকনোলজি সম্পর্কে প্রচুর তথ্য রয়েছে)। উদাহরণস্বরূপ, [এই হল MDN পেইজে জাভাস্ক্রিপ্টের ম্যাথ অবজেক্ট](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math).
 
-There is also a lot of JavaScript code available that is **not built in**. JavaScript from third parties is usually referred to as a "library" or "plugin". One of my favorites is called **Underscore.js**. Let's go and grab it and load it into our page! First go to the Underscore site, [http://underscorejs.org/](http://underscorejs.org/), click on the download link (I usually use development versions because they are easier to read but both will give you the same basic functionality), and then copy all the code onto your clipboard (you can use Select All from the Edit menu to select everything). Then paste it into your console and hit enter. Now your browser has a new variable in it: `_`. Underscore gives you a ton of helpful functions to play with. We'll learn more about how to use them later.
+### <a id="third-party-javascript" href="#third-party-javascript">#</a> থার্ড -পার্টি  জাভাস্ক্রিপ্ট
 
-![console](images/underscore.gif)
+এমন অনেক জাভাস্ক্রিপ্ট কোড রয়েছে যা তৈরি নেই । জাভাস্ক্রিপ্টে থার্ড পার্টিস অর্থাৎ তৃতীয় পক্ষ হতে একটি "লাইব্রেরি" বা "প্লাগইন" হিসাবে উল্লেখ করা হয়। আমার প্রিয় একটির নাম হল `Underscore.js`। চলো আমরা এটি ধরি এবং আমাদের পেইজে এটি লোড করি! প্রথমে যাবো underscore সাইটে ,  ( http://underscorejs.org/) ,  ডাউনলোড  লিঙ্কে ক্লিক করতে হবে ( আমি সাধারনত ব্যবহার করি ডেভেলপমেন্ট ভার্সন কারন এগুলো পড়তে সহজ কিন্তু উভয়ই আপনাকে একই বেসিক ফাংশনালিটি প্রদান করবে), এবং এরপর সব কোড কপি করে তোমার ক্লিপবোর্ডে রাখো (তুমি এডিট মেনু থেকে সিলেক্ট অল ব্যবহার করে সবকিছু সিলেক্ট করতে পারবে)। তারপর তোমার কনসোলের মধ্যে এটি পেস্ট করো এবং এন্টার প্রেস করো । এখন তোমার ব্রাউজারে একটি নতুন ভ্যারিয়াবেল যোগ হয়েছেঃ `_` Underscore তোমাকে অনেক সুবিধা প্রদান করবে ফাংশনের সাথে খেলা করতে । আমরা পরে আরও শিখব কিভাবে এগুলো ব্যবহার করতে হয়।   
 
-### <a id="writing-functions" href="#writing-functions">#</a> Making new functions
+  ![console](images/underscore.gif)
 
-You aren't limited to using other peoples functions &mdash; you can also write them yourself. It's pretty easy! Let's make a function called `makeMoreExciting` that adds a bunch of exclamation points to the end of a string.
+### <a id="writing-functions" href="#writing-functions">#</a> নতুন ফাংশন তৈরি 
 
-    function makeMoreExciting(string) {
-      return string + '!!!!'
-    }
+তুমি অন্য মানুষের তৈরিকৃত ফাংশন ব্যবহারে সীমাবদ্ধ থাকবে না - তুমি নিজেও এমন লিখতে পারবে। এটি খুবই সহজ! চলো তাহলে আমরা `makeMoreExciting` নামের একটি ফাংশন তৈরি করি যেখানে বিস্ময়বোধক চিহ্ন যোগ হবে স্ট্রিং এর শেষে।
 
-In my head I read it out loud like this: "there's a function called 'make more exciting' that takes in a string and returns a new copy of that string that has a bunch of exclamation points at the end". Here is how we would write this in the console manually if we weren't using a function:
+```js
+function makeMoreExciting(string) {
+    return string + '!!!!'
+} 
+```
+
+  আমার মাথার ভেতরে  আমি এইভাবে জোরে জোরে পড়ি: "এমন একটি ফাংশন আছে যা 'আরো উত্তেজনাপূর্ণ করে'  যা একটি স্ট্রিং নেয় এবং সেই স্ট্রিং এর একটি নতুন কপি ফেরত দেয় যার শেষে বিস্ময়বোধক চিহ্নের একটি গুচ্ছ আছে"। এখানে আমরা কীভাবে ম্যানুয়ালি কনসোল লিখতে পারি যদি আমরা ফাংশন ব্যবহার না করি:
 
 ![console](images/custom-function-manually.gif)
 
-The expression `string + '!!!!'` returns a new string and our variable called `string` stays the same as before (since we never updated it to anything else with `=`).
 
-Let's use our function instead of doing it manually. First, paste the function into the console and then **call** the function by **passing in** a string:
+এক্সপ্রেশন স্ট্রিং + '!!!!' একটি নতুন স্ট্রিং ফেরৎ দেয়  এবং আমাদের ভেরিয়েবল নামক স্ট্রিংটি আগের মতোই থাকে (যেহেতু আমরা এটির `=`সাথে অন্য কোনও কিছু আপডেট করি নি  ) ।
 
-![console](images/custom-function-call.gif)
 
-You could also call the same function by passing in a variable that points to a string (in the above example we just typed the string straight in there as a value instead of saving it to a variable first):
+চলো আমরা এটা ম্যানুয়ালি করার পরিবর্তে ফাংশন ব্যবহার করি । প্রথমে, ফাংশনটি কন্সোলের মধ্যে পেস্ট করব এবং তারপর ফাংশন্ কল করবো স্ট্রিং চালানোর মধ্য দিয়ে:  
 
+ ![console](images/custom-function-call.gif)
+
+তুমি একটি ভেরিয়েবেলের মাধ্যমে একই ফাংশন কল করতে পারবে যা একটি স্ট্রিং নির্দেশ করে (উপরের উদাহরণে আমরা কেবল একটি ভেরিয়েবেলকে সংরক্ষণ করার পরিবর্তে মান হিসাবে স্ট্রিংটি টাইপ করেছি):  
+ 
 ![console](images/custom-function-call-variable.gif)
 
-The line `makeMoreExciting(sentence)` is equivalent to saying `sentence + '!!!!'`. What if we wanted to **modify in-place** (aka update) the value of sentence? Simply save the return value of the function back into our `sentence` variable:
+ `makeMoreExciting(sentence)`  লাইনটি  সহজভাবে বললে হয়  `sentence + '!!!!'` । কি হতো যদি আমরা  
+বাক্যটির মানের জায়গা সংশোধন করতে চাইতাম (অথবা আপডেট)? কেবলমাত্র আমরা সেই মানটি সংরক্ষন করবো যেটা  ফাংশন  ভেরিয়াবেল `sentence`  মাধ্যমে ফেরত পাঠিয়েছেঃ
 
+```
     var sentence = "time for a nap"
     sentence = makeMoreExciting(sentence)
+```
 
-Now `sentence` will have the exclamation marks in it! Note that you only have to use `var` when you are **initializing** a variable &mdash; the first time you ever use it. After that you shouldn't use `var` unless you want to re-initialize (reset/clear/empty) the variable.
 
-What would happen if we took out the `return` statement in our function?
+এখন `sentence` এর  মধ্যে বিস্ময়বোধক চিহ্ন থাকবে! মনে রাখবে তুমি শুধুমাত্র  তখনি  `var`  ব্যবহার করতে পারবে যখন ভেরিয়াবেল আরম্ভ করবে প্রথমবারের মত । এর পরে আপনি `var` ব্যবহার না করা উচিত যদি না আপনি পুনরায় ভেরিয়াবেল  আরম্ভ (পুনরায় সেট / পরিষ্কার / খালি)  করতে চান।
 
-![console](images/custom-function-no-return.gif)
+  কি হতে পারে যদি আমরা `return`  স্টেটমেন্ট ফাংশন থেকে বাদ দিয়ে দেই?
 
-Why is `sentence` empty? Because functions return `undefined` by default! You can choose to return a value by `return`ing something. Functions should take in a value and, if they change the value or create a new value that is supposed to be used later, `return` a value (fun fact: a fancy term for this style is *functional programming*). Here is another function that doesn't return anything but instead uses a different method to show us the output:
+ ![console](images/custom-function-no-return.gif)
+
+
+  `sentence`  টি ফাঁকা কেন? কারণ ফাংশন   `undefined` ফেরত পাঠায় ডিফল্ট দ্বারা !   আপনি নির্বাচন  করতে পারবেন একটি  ফেরতকৃত মান কোনোকিছু ফেরত দিয়ে । ফাংশনগুলির একটি মান গ্রহণ করা উচিত এবং, যদি তারা মান পরিবর্তন করে বা একটি নতুন মান তৈরি করে যা পরে ব্যবহার করা অনুমিত হয়, একটি  মান ফেরত (মজার বিষয় হল: এই শৈলীর জন্য একটি অভিনব শব্দ ফাংশনাল প্রোগ্রামিং)। এখানে অন্য একটি ফাংশন রয়েছে যা কিছু ফেরৎ দেয় না কিন্তু এর পরিবর্তে আমাদের আউটপুট প্রদর্শন করে একটি ভিন্ন পদ্ধতি ব্যাবহারের মাধ্যমে:
 
 ```js
 function yellIt(string) {
@@ -130,18 +142,20 @@ function yellIt(string) {
 }
 ```
 
-This function, `yellIt`, uses our previous function `makeMoreExciting` as well as the built-in String method [toUpperCase](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/toUpperCase). Methods are just a name for a function when it belongs to something &mdash; in this case `toUpperCase` is a function that belongs to `String` so we can refer to it as either a method *or* a function. `makeMoreExciting` on the other hand doesn't belong to anyone so it would be technically incorrect to refer to it as a method (confusing, I know).
+এই ফাংশন, `yellIt`, আমাদের পূর্বের ফাংশনটি  `makeMoreExciting` ব্যবহার করে  উপরন্তু,  স্ট্রিং মেথড  toUpperCase  তৈরি করে।
+মেথডস একটি নাম ফাংশন এর জন্য যখন এটি কিছুর সাথে সম্পর্কিত - এই ক্ষেত্রে `toUpperCase` একটি ফাংশন যা স্ট্রিং এর সাথে সম্পর্কিত তাই আমরা এটিকে পদ্ধতি বা একটি ফাংশন হিসাবে উল্লেখ করতে পারি। অন্যদিকে `makeMoreExciting` কোনকিছুর সাথে সম্পর্কিত নয় তাই  এটি টেকনিক্যালি ভুল হবে যদি এটাকে মেথড হিসেবে উল্লেখ করা হয়( বিভ্রান্তিকর, আমি জানি)। 
 
-The last line of the function is another built-in that simply takes in any values that you give it and prints them out into the console.
+ ফাংশনের শেষ লাইনটি আরেকটু অন্তর্নির্মিত- যেটিতে তুমি কেবল যে কোনও মান দিয়ে দিবে এবং প্রিন্ট করে দিবে কনসোলে । 
 
-![console](images/custom-function-console-log.gif)
+ ![console](images/custom-function-console-log.gif)
 
-So is there something wrong with the above `yellIt` function? It depends! Here are the two major types of functions:
+  উপরের `YellIt`  ফাংশনের সঙ্গে কিছু ভুল আছে? এটা নির্ভর করে! এখানে দুটি প্রধান ফাংশন রয়েছেঃ 
 
-  - functions that modify or create values and return them
-  - functions take in values and perform some action that cannot be returned
+*  ফাংশন যা পরিবর্তন করে বা মান তৈরি করে এবং তাদের ফেরত দেয়।
+*  ফাংশন মান গ্রহণ করে এবং কিছু কর্ম সঞ্চালিত করে যা ফেরত পাওয়া যাবে না ।
 
-`console.log` is an example of the second type of function: it prints things out to your console &mdash; an action that you can see with your eyes but that cannot be represented as a JavaScript value. My own rule of thumb is to try to keep the two types of functions separate from each other, so here's how I would rewrite the `yellIt` function:
+
+   `console.log` হল দ্বিতীয় ধরনের ফাংশনের একটি উদাহরণ: এটি  তোমার  কাজকে প্রিন্ট করে দেয় কনসোলে - এমন একটি কাজ  যা তুমি তোমার চোখ দিয়ে  দেখতে পারো কিন্তু এটি জাভাস্ক্রিপ্ট মান হিসাবে উপস্থাপন করা যায় না । আমার নিজস্ব নিয়ম হল দুই ধরনের ফাংশনকে একে অপরের থেকে আলাদা রাখার চেষ্টা করা, তাই এখানে আমি `yellIt` ফাংশনটি পুনর্লিখন করব যেভাবেঃ
 
 ```js
 function yellIt(string) {
@@ -152,7 +166,9 @@ function yellIt(string) {
 console.log(yellIt("i fear no human"))
 ```
 
-This way `yellIt` becomes more **generic**, meaning it only does one or two simple little things and doesn't know anything about printing itself to a console &mdash; that part can always be programmed later, outside the function definition.
+
+এইভাবে `yellIt` আরও জাতিবাচক হয়ে যায়, যার অর্থ এটি কেবল একটি বা দুইটি সাধারণ ছোট্ট জিনিসগুলি করে এবং নিজেকে একটি কনসোলের মুদ্রণ সম্পর্কে কিছুই জানে না - যে অংশটি পরে ফাংশনের সংজ্ঞা ছাড়াই প্রোগ্রাম করা যায়। 
+
 
 ### <a id="loops" href="#loops">#</a> Loops
 
