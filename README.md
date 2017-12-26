@@ -176,7 +176,7 @@ console.log(yellIt("i fear no human"))
 
 লুপ হলো একটি কম্পিউটারের শক্তি ব্যবহার করার সবচেয়ে গুরুত্বপূর্ণ উপায়। ```Underscore.js```  এর কথা মনে আছে?
 নিশ্চিত করো ফাইলটি তুমি পেইজে লোড করেছো কিনা (মনে কর: তুমি শুধুমাত্র তোমার কি-বোর্র্ডের up-Arrow  কয়েকবার চেপে Enter  এ চাপ দিলেই ফাইলটি লোড হয়ে যাবে) এবং সেটিকে তোমার কনসোলে  কপি/পেস্ট করো:
-```
+```js
 function logANumber(someNumber) {
   console.log(someNumber)
 }
@@ -188,7 +188,7 @@ _.times(10, logANumber)
 ![console](https://github.com/entrptaher/a-cats-guide-for-js-in-bangla/raw/master/images/times-loop.png "console")
 
 যদি আমরা একই ফলাফল পেতে চাই তাহলে আমরা কোডটি এইভাবে লিখতাম: 
-```
+```js
 logANumber(0)
 logANumber(1)
 logANumber(2)
@@ -205,10 +205,12 @@ logANumber(9)
 
 তো কেন এটিকে  লুপিং  বলা হয়? এইভাবে চিন্তা করো: যদি আমাদেরকে জাভাস্ক্রিপ্ট 
 অ্যারে ব্যবহার করে ১০টি সংখ্যার একটি লিস্ট লিখতে দেয়া হয় (০ থেকে 9)  তাহলে এটি এরকম দেখাবে:
-‍‍‍‍‍‍```var zeroThroughTen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]‍‍‍
+
+```js
+var zeroThroughTen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]‍‍‍
 ```
 
- ```time``` মেথডটি এই অ্যারের প্রত্যেকটি উপাদানে একবার করে যায় এবং সংখ্যাটি ফেরত পাঠায়। উপরের উদাহরণে 
+time মেথডটি এই অ্যারের প্রত্যেকটি উপাদানে একবার করে যায় এবং সংখ্যাটি ফেরত পাঠায়। উপরের উদাহরণে 
 কাজটির নাম দেয়া হয়েছে ```logNumber``` যেটা  নাম্বারগুলোকে লগ করবে।
 এভাবে কাজগুলিকে পুনরাবৃত্তি করা হয় অ্যারের উপর *লুপিং* করে।
 
@@ -216,24 +218,26 @@ logANumber(9)
 
 আমি আগেই অ্যারে কয়েকবার ব্যবহার করেছি কিন্তু আসো এইবার কিছু সময় কাটাই অ্যারে শিখতে। কল্পনা কর তোমার  সব বন্ধুদেরকে তুমি একটি লিস্টে রাখবে। অ্যারে এইখানে ব্যবহার করা যেতে পারে । চিন্তা কর একটা অ্যারে যেখানে তুমি তুমি হাজার হাজার ড্যাটা সংরক্ষণ করতে পারবে।
 এইভাবে তুমি একটি অ্যারে বানাতে পারো:
-```
+```js
 var myCatFriends = ["bill", "tabby", "ceiling"]
 ```
 সেই! এখন তোমার কাছে তোমার বিড়াল বন্ধুদের একটি লিস্ট আছে।
 উপাদান(যাকে তুমি এই অ্যারের উপাদান বলতে পারো) যেগুলো তোমার অ্যারেতে সংরক্ষিত আছে সেগুলো ০ থেকে শুরু হবে এবং এক এক করে বাড়বে। অতএব ```myCatFriends[0]``` 'bill' কে ফলাফল হিসেবে বের করবে এবং ```myCatFriends[1]```  'tabby' কে ইত্যাদি ইত্যাদি।
 লিস্ট হতে তোমার বন্ধুদের নাম সরাসরি বের করতে এই কোডটি লেখো :
-```
+```js
 console.log(myCatFriends[0])
 ```
-![console](https://github.com/entrptaher/a-cats-guide-for-js-in-bangla/raw/master/images/array-access.png "console")
+![console](https://github.com/entrptaher/a-cats-guide-for-js-in-bangla/raw/master/images/array-access.png )
 
 এখন তুমি যদি তোমার এই বিড়াল বন্ধুদের লিস্টে নতুন কোনো বন্ধুকে এড করতে কেও তাহলে তাহলে এই রুলটি ফল করো:
 
-```myCatFriends.push("super hip cat")```
+```js
+myCatFriends.push("super hip cat")
+```
 
 নতুন বন্ধুটি যুক্ত হয়েছে কিনা তা বের করতে ‍‍‍```.length```  ব্যবহার করো।
 
-![console](https://github.com/entrptaher/a-cats-guide-for-js-in-bangla/raw/master/images/array-push-length.png "console")
+![console](https://github.com/entrptaher/a-cats-guide-for-js-in-bangla/raw/master/images/array-push-length.png )
 
 লক্ষ্য করো ```push```  কিভাবে তোমার লিস্টের  দৈর্ঘ্য রিটার্র্ন করলো. সেই!  এবং মনে রাখো তুমি যেই সিরিয়ালে ড্যাটা রাখবে অ্যারে সেই সিরিয়ালই প্রদর্র্শন করবে। জাভাস্ক্রিপ্টে সব কিছু সিরিয়াল মনে রাখে না।এটাই হলো অ্যারের বিশেষ দিক!
 
@@ -241,7 +245,7 @@ console.log(myCatFriends[0])
 ### <a id="objects" href="#objects">#</a> Objects
 
 লিস্টের জন্য অ্যারে ভালো তবে কিছু ক্ষেত্রে তা ব্যবহার করা কঠিন হয়ে যায়।এখন কি হবে যদি তুমি নাম ছাড়া আরো কিছু এড করতে চাও? 
-```
+```js
 var myCatFriends = ["bill", "tabby", "ceiling"]
 var lastNames = ["the cat", "cat", "cat"]
 var addresses = ["The Alley", "Grandmas House", "Attic"]
@@ -252,10 +256,12 @@ var addresses = ["The Alley", "Grandmas House", "Attic"]
 
 এটি ভেঙ্গে জিতে পারে।কারণ যদি আমাদের অ্যারেগুলো পরিবর্তিত হয় এবং আমরা যদি নতুন কোনো বিড়াল তাতে এড করি তাহলে আমাদের কে ```billsPosition``` ও আপডেট করতে হবে Bill  এর তথ্য অ্যারেতে পাওয়ার জন্য।
 object  এর মাধ্যমে আরো সহজে তথ্য গুলো সংরক্ষণ করা যায়:
-```
+``` js
+
 var firstCat = { name: "bill", lastName: "the cat", address: "The Alley" }
 var secondCat = { name: "tabby", lastName: "cat", address: "Grandmas House" }
 var thirdCat = { name: "ceiling", lastName: "cat", address: "Attic" }
+
 ```
 
 কেন আমরা এই পদ্ধতি ব্যবহার করবো? কারণ, এখন আমাদের কাছে একটি ভেরিয়েবল আছে যেখানে একটি বিড়ালের যাবতীয় তথ্য গুলো সংরক্ষিত আছে যে খুব সহজেই বুঝা ও পড়া যায় ।
@@ -263,27 +269,27 @@ var thirdCat = { name: "ceiling", lastName: "cat", address: "Attic" }
 ![console](https://github.com/entrptaher/a-cats-guide-for-js-in-bangla/raw/master/images/object-lookup.png "console")
 
 তুমি মনে করতে পারো অবজেক্ট হলো চাবির মতো যে চাবির  গোছায় আটকানো। একেকটি চাবি একটি দরজার জন্য এবং যদি তোমার কাছে সজ্জিত চাবির গোছা থাকে তাহলে তুমি সহজেই দরজা খুলতে পারবে।  আসলে বাম পাশে যে ‍‍‍```:``` আছে সেটাকে বলা হয় **keys** (এদেরকে **properties** বলা হয় ) এবং ডান পাশের গুলোকে বলা হয় **value**। 
-```
+```js
 // এখানে key  হচ্ছে  name  আর  value  হচ্ছে  "bill"
 { name: 'bill' }
 ```
 
 অতএব কেন আমরা অ্যারে ব্যবহার করবো যেখানে আমরা অব্জেক্টেই ডাটা রাখতে পারি? কারণ, অবজেক্ট তোমার দেয়া দাতার সিরিয়াল মনে রাখতে পারে না।
 তুমিয এইভাবে কিছু ডাটা রাখতে পারো: 
-```
+```js
 { date: "10/20/2012", diary: "slept a bit today", name: "Charles" }
 ```
 কিন্তু কম্পিউটার তোমাকে ব্যাক করবে এইভাবে: 
-```
+```js
 { diary: "slept a bit today", name: "Charles", date: "10/20/2012" }
 ```
 অথবা এইভাবে: 
-```
+```js
 { name: "Charles", diary: "slept a bit today", date: "10/20/2012" }
 ```
 সুতরাং তুমি তোমার অবজেক্ট এর  **keys**  কে বিশ্বাস নাও করতে পারো।
 তুমি যদি এই সমস্যায় পরে যাও তাহলে তুমি একটি অ্যারে তৈরী করতে পারো যাতে থাকবে অবজেক্ট অথবা একটি অবজেক্ট যাতে থাকবে অ্যারে।
-```
+```js
 var moodLog = [
   {
     date: "10/20/2012",
