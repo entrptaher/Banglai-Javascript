@@ -172,10 +172,10 @@ console.log(yellIt("i fear no human"))
 
 ### <a id="loops" href="#loops">#</a> Loops
 
-Now that we have some basic skills under our belt (*Author's note: do cats even wear belts?*) we can start being lazy. What?! Yes, that's right: programming is about being lazy. Larry Wall, inventor of the Perl programming language, called laziness the [most important virtue](http://c2.com/cgi/wiki?LazinessImpatienceHubris) of a good programmer. If computers didn't exist you would have to do all sorts of tedious tasks by hand, but if you learn to program you can lay in the sun all day while a computer somewhere runs your programs for you. It is a glorious lifestyle filled with relaxation!
+এখন যেহেতু আমাদের কিছু সাধারণ দক্ষতা আছে(লেখকের নোট: বিড়ালও বেল্ট পরে?) আমরা আলসামি করতে পারি। কি?! হ্যা, এইটাই ঠিক: প্রোগ্রামিং হচ্ছে আলসামি। ল্যারি ওয়াল, Perl প্রোগ্রামিং ল্যাঙ্গুয়েজের আবিষ্কারক বলেছেন আলসামি হচ্ছে একজন ভালো প্রোগ্রামারের সবচেয়ে ভালো গুন।  যদি কম্পিউটার না থাকতো তাহলে সব রকমের ক্লান্তিকর কঠিন কাজ গুলো তোমাকরে নিজ হাতে করতে হতো। কিন্তু তুমি যদি প্রোগ্রামিং পারো তাহলে তুমি সারাদিন সূর্যের নাইস থাকতে পারবে আর তোমার কম্পিউটার স্বয়ংক্রিয়ভাবে তোমার করা প্রোগ্রামগুলো চালিয়ে যাবে । এটি একটি গৌরবময় জীবনধারা বিশ্রাম সঙ্গে ভরা! 
 
-Loops are one of the most important ways to harness the power of a computer. Remember `Underscore.js` from earlier? Make sure you have it loaded in the page (remember: you can just hit the up arrow on your keyboard a few times and then hit `Enter` to load it in again if you need to) and try copy/pasting this into your console:
-
+লুপ হলো একটি কম্পিউটারের শক্তি ব্যবহার করার সবচেয়ে গুরুত্বপূর্ণ উপায়। ```Underscore.js```  এর কথা মনে আছে?
+নিশ্চিত করো ফাইলটি তুমি পেইজে লোড করেছো কিনা (মনে কর: তুমি শুধুমাত্র তোমার কি-বোর্র্ডের up-Arrow  কয়েকবার চেপে Enter  এ চাপ দিলেই ফাইলটি লোড হয়ে যাবে) এবং সেটিকে তোমার কনসোলে  কপি/পেস্ট করো:
 ```js
 function logANumber(someNumber) {
   console.log(someNumber)
@@ -183,12 +183,11 @@ function logANumber(someNumber) {
 _.times(10, logANumber)
 ```
 
-This code uses the [times](http://underscorejs.org/#times) method of Underscore which takes in 1 number and 1 function and then starts from 0 and for 10 steps counts up by 1, calling the function with the number each step of the way.
+এই কোডটি Underscore  এর  [time](http://underscorejs.org/#times)  মেথড টি প্রদর্র্শন করে যেটা একটি সংখ্যা নেয় এবং একটি ফাংশন তারপর এটি ০ থেকে ১০ পর্যন্ত গণনা করে।
 
-![console](images/times-loop.png)
+![console](https://github.com/entrptaher/a-cats-guide-for-js-in-bangla/raw/master/images/times-loop.png "console")
 
-If we were to manually write out what `times` is doing in the above code it would look like this:
-
+যদি আমরা একই ফলাফল পেতে চাই তাহলে আমরা কোডটি এইভাবে লিখতাম: 
 ```js
 logANumber(0)
 logANumber(1)
@@ -202,99 +201,94 @@ logANumber(8)
 logANumber(9)
 ```
 
-But cats refuse to do unnecessary manual work like this so we must always ask ourselves, *"am I doing this in the laziest way possible?"*.
+কিন্তু বিড়াল কখনও অপ্রয়োজনীয় কাজ করে না তাই আমরা আমাদের কে সবসময় জিজ্ঞাসা করবো " আমি কি এইটা কোনো অলস উপায়ে করছি?" 
 
-So why is this called looping? Think of it like this: If we were to write out a list of 10 numbers (from 0 to 9) using a JavaScript Array it would look like this:
+তো কেন এটিকে  লুপিং  বলা হয়? এইভাবে চিন্তা করো: যদি আমাদেরকে জাভাস্ক্রিপ্ট 
+অ্যারে ব্যবহার করে ১০টি সংখ্যার একটি লিস্ট লিখতে দেয়া হয় (০ থেকে 9)  তাহলে এটি এরকম দেখাবে:
 
 ```js
-var zeroThroughTen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+var zeroThroughTen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]‍‍‍
 ```
 
-What `times` really does is visit each number and repeat a task: in the example above the task was to call the `logANumber` function with the current number. Repeating tasks in this way is referred to as *looping over* the Array.
+time মেথডটি এই অ্যারের প্রত্যেকটি উপাদানে একবার করে যায় এবং সংখ্যাটি ফেরত পাঠায়। উপরের উদাহরণে 
+কাজটির নাম দেয়া হয়েছে ```logNumber``` যেটা  নাম্বারগুলোকে লগ করবে।
+এভাবে কাজগুলিকে পুনরাবৃত্তি করা হয় অ্যারের উপর *লুপিং* করে।
 
 ### <a id="arrays" href="#arrays">#</a> Arrays
 
-I've mentioned these a few times but let's spend a minute learning about them. Imagine you need to keep track of all your buddies. Well, an Array will do just fine. Think of an Array like a sorted list that you can keep *tons* of stuff in.
-
-This is how you make one:
-
+আমি আগেই অ্যারে কয়েকবার ব্যবহার করেছি কিন্তু আসো এইবার কিছু সময় কাটাই অ্যারে শিখতে। কল্পনা কর তোমার  সব বন্ধুদেরকে তুমি একটি লিস্টে রাখবে। অ্যারে এইখানে ব্যবহার করা যেতে পারে । চিন্তা কর একটা অ্যারে যেখানে তুমি তুমি হাজার হাজার ড্যাটা সংরক্ষণ করতে পারবে।
+এইভাবে তুমি একটি অ্যারে বানাতে পারো:
 ```js
 var myCatFriends = ["bill", "tabby", "ceiling"]
 ```
-
-Sweet! Now you have a list of your cat buddies.
-
-Elements (that is what you call a single item in an array) that are stored within arrays start at 0 and count up from there. So `myCatFriends[0]` returns `bill` and `myCatFriends[1]` returns `tabby`... etc etc.
-
-To get buddies out of your brand new Array you can just access an element directly like so:
-
+সেই! এখন তোমার কাছে তোমার বিড়াল বন্ধুদের একটি লিস্ট আছে।
+উপাদান(যাকে তুমি এই অ্যারের উপাদান বলতে পারো) যেগুলো তোমার অ্যারেতে সংরক্ষিত আছে সেগুলো ০ থেকে শুরু হবে এবং এক এক করে বাড়বে। অতএব ```myCatFriends[0]``` 'bill' কে ফলাফল হিসেবে বের করবে এবং ```myCatFriends[1]```  'tabby' কে ইত্যাদি ইত্যাদি।
+লিস্ট হতে তোমার বন্ধুদের নাম সরাসরি বের করতে এই কোডটি লেখো :
 ```js
 console.log(myCatFriends[0])
 ```
+![console](https://github.com/entrptaher/a-cats-guide-for-js-in-bangla/raw/master/images/array-access.png )
 
-![console](images/array-access.png)
+এখন তুমি যদি তোমার এই বিড়াল বন্ধুদের লিস্টে নতুন কোনো বন্ধুকে এড করতে কেও তাহলে তাহলে এই রুলটি ফল করো:
 
-If you made a brand new cat friend at the hippest cat club the other night and you want to add them to your list it is super simple: `myCatFriends.push("super hip cat")`.
+```js
+myCatFriends.push("super hip cat")
+```
 
-To check that the new cat made it into your array you can use `.length`:
+নতুন বন্ধুটি যুক্ত হয়েছে কিনা তা বের করতে ‍‍‍```.length```  ব্যবহার করো।
 
-![console](images/array-push-length.png)
+![console](https://github.com/entrptaher/a-cats-guide-for-js-in-bangla/raw/master/images/array-push-length.png )
 
-Notice how `push` returned the length? Handy! Also take note that arrays will always **preserve ordering** which means they will remember the order in which you added or defined things. Not everything in JavaScript preserves ordering so remember this special property of Arrays!
+লক্ষ্য করো ```push```  কিভাবে তোমার লিস্টের  দৈর্ঘ্য রিটার্র্ন করলো. সেই!  এবং মনে রাখো তুমি যেই সিরিয়ালে ড্যাটা রাখবে অ্যারে সেই সিরিয়ালই প্রদর্র্শন করবে। জাভাস্ক্রিপ্টে সব কিছু সিরিয়াল মনে রাখে না।এটাই হলো অ্যারের বিশেষ দিক!
+
 
 ### <a id="objects" href="#objects">#</a> Objects
 
-Arrays are good for lists, but for other tasks they can be hard to work with. Consider our array of cat friends. What if you also wanted to store more than just names?
-
+লিস্টের জন্য অ্যারে ভালো তবে কিছু ক্ষেত্রে তা ব্যবহার করা কঠিন হয়ে যায়।এখন কি হবে যদি তুমি নাম ছাড়া আরো কিছু এড করতে চাও? 
 ```js
 var myCatFriends = ["bill", "tabby", "ceiling"]
 var lastNames = ["the cat", "cat", "cat"]
 var addresses = ["The Alley", "Grandmas House", "Attic"]
 ```
+কিছু ক্ষেত্রে সব নাম অথবা সব ঠিকানা একটি ভেরিয়েবল রাখা ভালো। কিন্তু কিছু সময় তুমি শুধু মাত্র একটি বিড়ালের কথা চিন্তা করবে। মনে করো  Bill,  আর তুমি শুধু তারই ঠিকানা দেখতে চাও। অ্যারের ক্ষেত্রে তোমাকে এইখানে অনেক কাজ করতে হবে। কারণ তুমি অ্যারেকে বলতে পারবে না "হেই অ্যারে,আমাকে  Bill  এর ঠিকানা দাও "। কারণ  "Bill"  একটি অ্যারেতে আর তার ঠিকানা আরেকটি অ্যারেতে। 
 
-Sometimes it is nice to have all of the addresses or names in one variable. But sometimes you have a cat in mind, let's say Bill, and you just want to look up that cat's address. With arrays it takes a lot of work because you can't just say 'hey array, give me Bill's address' because 'Bill' is in one array and his address is in a totally different array.
+![console](https://github.com/entrptaher/a-cats-guide-for-js-in-bangla/raw/master/images/array-lookup.png "console")
 
-![console](images/array-lookup.png)
+এটি ভেঙ্গে জিতে পারে।কারণ যদি আমাদের অ্যারেগুলো পরিবর্তিত হয় এবং আমরা যদি নতুন কোনো বিড়াল তাতে এড করি তাহলে আমাদের কে ```billsPosition``` ও আপডেট করতে হবে Bill  এর তথ্য অ্যারেতে পাওয়ার জন্য।
+object  এর মাধ্যমে আরো সহজে তথ্য গুলো সংরক্ষণ করা যায়:
+``` js
 
-This can be brittle because if our arrays change and we add a new cat to the beginning we would have to also update our `billsPosition` variable to point to the new location of Bill's information in the arrays! Here is a easier to maintain way to store information like this using objects:
-
-```js
 var firstCat = { name: "bill", lastName: "the cat", address: "The Alley" }
 var secondCat = { name: "tabby", lastName: "cat", address: "Grandmas House" }
 var thirdCat = { name: "ceiling", lastName: "cat", address: "Attic" }
+
 ```
 
-Why would we do it this way? Because now we have a variable for each cat that we can use to get that cats values in a more convenient and readable way.
+কেন আমরা এই পদ্ধতি ব্যবহার করবো? কারণ, এখন আমাদের কাছে একটি ভেরিয়েবল আছে যেখানে একটি বিড়ালের যাবতীয় তথ্য গুলো সংরক্ষিত আছে যে খুব সহজেই বুঝা ও পড়া যায় ।
 
-![console](images/object-lookup.png)
+![console](https://github.com/entrptaher/a-cats-guide-for-js-in-bangla/raw/master/images/object-lookup.png "console")
 
-You can think of Objects like keys on a keyring. Each one is for a specific door and if you have nice labels on your keys you can open doors very fast. In fact, the things on the left hand side of the `:` are called **keys** (are also known as **properties**) and the things on the right hand side are **values**.
-
+তুমি মনে করতে পারো অবজেক্ট হলো চাবির মতো যে চাবির  গোছায় আটকানো। একেকটি চাবি একটি দরজার জন্য এবং যদি তোমার কাছে সজ্জিত চাবির গোছা থাকে তাহলে তুমি সহজেই দরজা খুলতে পারবে।  আসলে বাম পাশে যে ‍‍‍```:``` আছে সেটাকে বলা হয় **keys** (এদেরকে **properties** বলা হয় ) এবং ডান পাশের গুলোকে বলা হয় **value**। 
 ```js
-// an object with a single key 'name' and single value 'bill'
+// এখানে key  হচ্ছে  name  আর  value  হচ্ছে  "bill"
 { name: 'bill' }
 ```
 
-So why would you ever use arrays if you can just put your data in objects? Because objects don't remember the order of the keys that you set. You might enter in an object like this:
-
+অতএব কেন আমরা অ্যারে ব্যবহার করবো যেখানে আমরা অব্জেক্টেই ডাটা রাখতে পারি? কারণ, অবজেক্ট তোমার দেয়া দাতার সিরিয়াল মনে রাখতে পারে না।
+তুমিয এইভাবে কিছু ডাটা রাখতে পারো: 
 ```js
 { date: "10/20/2012", diary: "slept a bit today", name: "Charles" }
 ```
-
-But the computer could give it back to you like this:
-
+কিন্তু কম্পিউটার তোমাকে ব্যাক করবে এইভাবে: 
 ```js
 { diary: "slept a bit today", name: "Charles", date: "10/20/2012" }
 ```
-
-Or like this!
-
+অথবা এইভাবে: 
 ```js
 { name: "Charles", diary: "slept a bit today", date: "10/20/2012" }
 ```
-
-So you can't ever trust the order of keys in objects. If you wanna get REALLY fancy you can make an array filled with objects, or an object filled with arrays!
-
+সুতরাং তুমি তোমার অবজেক্ট এর  **keys**  কে বিশ্বাস নাও করতে পারো।
+তুমি যদি এই সমস্যায় পরে যাও তাহলে তুমি একটি অ্যারে তৈরী করতে পারো যাতে থাকবে অবজেক্ট অথবা একটি অবজেক্ট যাতে থাকবে অ্যারে।
 ```js
 var moodLog = [
   {
@@ -317,8 +311,8 @@ var favorites = {
   napSpots: ["couch", "planter box", "human face"]
 }
 ```
+এইভাবে যখন তুমি বিভিন্ন জিনিস একত্রে রাখতে কেও তুমি এই ডাটার ধরণ ব্যবহার করতে পারো!
 
-When you combine different things like this you are making **data structures**, just like legos!
 
 ### <a id="callbacks" href="#callbacks">#</a> Callbacks
 
