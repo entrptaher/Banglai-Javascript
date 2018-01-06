@@ -316,20 +316,19 @@ var favorites = {
 
 ### <a id="callbacks" href="#callbacks">#</a> Callbacks
 
-Callbacks aren't really a feature of JavaScript like `Object` or `Array`, but instead just a certain way to use functions. To understand why callbacks are useful you first have to learn about asynchronous (often shortened to async) programming. Asynchronous code by definition is code written in a way that is not synchronous. Synchronous code is easy to understand and write. Here is an example to illustrate:
+কলব্যাক `Object` বা `Array` এর মত জাভাস্ক্রিপ্টের কোন ফিচার না, বরং এটা হলো ফাংশন ব্যবহার করার একটা উপায়। কলব্যাক কতটা উপকারী তা বুঝতে হলে প্রথমে তোমার বুঝতে হবে এসিংক্রোনাস প্রোগ্রামিং কি। এসিংক্রোনাস কোড হলো এমন কোড যেটা সিংক্রোনাস না। সিংক্রোনাস কোড লেখতে ও বুঝতে খুবই সহজ, নিচের উদাহরণটার দিকে দেখো, 
 
 ```js
 var photo = download('http://foo-chan.com/images/sp.jpg')
 uploadPhotoTweet(photo, '@maxogden')
 ```
 
-This synchronous [pseudo-code](http://simple.wikipedia.org/wiki/Pseudocode) downloads an adorable cat photo and then uploads the photo to twitter and tweets the photo at `@maxogden`. Pretty straightforward!
+এই সিংক্রোনাস কোডটা (আসল কোড নয়, এটাকে Pseudocode বলে), এটা একটা সুন্দর বিড়ালের ছবি নামাবে, এরপর ওই ছবিটা টুইটারে আপলোড করবে। কত সহজ না?
 
-(*Author's note: I @maxogden do happily accept random cat photo tweets*)
+এই কোডটা সিংক্রোনাস, কারণ টুইটারে ছবিটা আপলোড করতে হলে প্রথমে অবশ্যই ছবিটা নামাতে হবে। তারমানে ২য় লাইন কোনভাবেই প্রথম লাইনের আগে চলতে পারবে না। এটাকে বাস্তবের কোড আকারে লিখতো গেলে আমাদের সিউর হতে হবে যে ডাউনলোড ফাংশনটা শেষ না হওয়ার আগ পর্যন্ত পরের কোন লাইনই যেন না চলে, বা ব্লকড হয়ে থাকে। এরপর ডাউনলোড শেষ হলে আবার সব আনব্লকড হবে।
 
-This code is synchronous because in order for photo to get uploaded to the tweet, the photo download must be completed. This means that line 2 cannot run until the task on line 1 is totally finished. If we were to actually implement this pseudo-code we would want to make sure that `download` 'blocked' execution until the download was finished, meaning it would prevent *any* other JavaScript from being executed until it finished, and then when the download completes it would un-block the JavaScript execution and line 2 would execute.
+সিংক্রোনাস কোড খারাপ না, এটা চলার মতই, যতক্ষণ না কিছু সেভ, লোড, ডাউনলোড, আপলোড হচ্ছে। কেমন লাগে যখন ইন্টারনেট স্লো লাগে, ভিডিও বাফার করে, একটা সাইট লোড হতে সারাদিন লাগে? সিংক্রোনাস হলে যতক্ষণ না ডাউনলোড শেষ হচ্ছে, ততক্ষণ এরকম সবই আটকে থাকবে, এতে করে ওয়েবসাইট খুবই স্লো মনে হবে।
 
-Synchronous code is fine for things that happen fast, but it's horrible for things that require saving, loading, downloading or uploading. What if the server you're downloading the photo from is slow, or the internet connection you are using is slow, or the computer you are running the code on has too many youtube cat video tabs open and is running slowly? It means that it could potentially take minutes of waiting before line 2 gets around to running. Meanwhile, because all JavaScript on the page is being blocked from being run while the download is happening, the webpage would totally freeze up and become unresponsive until the download is done.
 
 Blocking execution should be avoided at all costs, especially when doing so makes your program freeze up or become unresponsive. Let's assume the photo above takes one second to download. To illustrate how long one second is to a modern computer, here is a program that tests to see how many tasks JavaScript can process in one second.
 
